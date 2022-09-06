@@ -69,6 +69,6 @@ Deno Fresh framework is a full stack JavaScript web framework which you can use 
 
 Web apps created with Fresh support server-side rendering (SSR), meaning all the HTML, CSS and JavaScript code is first generated on the server and delievered to the client as fully rendered HTML pages, this greatly reduce the time a page loads on the browser. It uses [Preact](https://preactjs.com) to render pages on both the server and client, depending on the specific component we need but most rendering is done on the server, the client renders small islands of interactivity for example click buttons. In the aricle you will learn how to create a simple blog using the Fresh Framework and how Fresh can help both your web app and development faster also note that you can create a large scale app like Github.
 
-## More about the Deno Fresh Framework and features
+## Deno Fresh Framework features and benefits
 
-
+Fresh make use of just-in-time (JIT) rendering on the, using a combination of a routing framework and templating engine for rendering pages on demand. Whenever a user make a request it takes less time for the browser to load content onto the screen.
