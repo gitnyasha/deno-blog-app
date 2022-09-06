@@ -77,4 +77,4 @@ This will watch the project directory and restart as necessary.
 
 Deno Fresh framework is a full stack JavaScript web framework which you can use to build small and large scale web applications, it also support writting in TypeScript. Fresh framework does not provide a build step, the code that you write is the code that is run on the server.
 
-Web apps created with Fresh support server-side rendering (SSR), meaning all the HTML, CSS and JavaScript code is first processed on the server and delievered to the client as fully populated web pages.
+Web apps created with Fresh support server-side rendering (SSR), meaning all the HTML, CSS and JavaScript code is first generated on the server using Deno and delievered to the client as fully rendered HTML pages, this greatly reduce the time a page loads on the browser. 
