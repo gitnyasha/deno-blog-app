@@ -62,8 +62,6 @@ Use the following link to let us know your article is ready for us to review:
 
 https://portal.draft.dev/assignments/recA01Oo0vxvuQNVw
 
-
-
 # fresh project
 
 ### Usage
@@ -76,3 +74,5 @@ deno task start
 
 This will watch the project directory and restart as necessary.
 # deno-blog-app
+
+Deno Fresh framework is a full stack JavaScript web framework which you can use to build small and large scale web applications, it also support writting in TypeScript. Fresh framework does not provide a build step, it runs the same code you wrote on the server.
