@@ -72,3 +72,5 @@ Web apps created with Fresh support server-side rendering (SSR), meaning all the
 ## Deno Fresh Framework features and benefits
 
 Fresh makes use of just-in-time (JIT) rendering on the server meaning the code is compiled when needed not before runtime, using a combination of a routing framework and templating engine for rendering pages on demand. Whenever a user make a request it takes less time for the browser to load content onto the screen. Now remember when I said that Fresh does not provide a build step, any TypeScript or JSX to plain JavaScript code is done when it is needed giving very fast iteration loops and deployments, you can use any platform that supports Deno to deploy your Fresh web app but the recommended platform is [Deno deploy](https://deno.com/deploy), visit the site on how to deploy your site it is very easy and is not time consuming.
+
+Deno Fresh framework has a zero config necessary, there are no configurations that need to be done to run your first Fresh web app as you will see below when I am going to create a sample site.
