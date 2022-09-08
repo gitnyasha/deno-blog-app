@@ -71,4 +71,4 @@ Web apps created with Fresh support server-side rendering (SSR), meaning all the
 
 ## Deno Fresh Framework features and benefits
 
-Fresh make use of just-in-time (JIT) rendering on the, using a combination of a routing framework and templating engine for rendering pages on demand. Whenever a user make a request it takes less time for the browser to load content onto the screen.
+Fresh makes use of just-in-time (JIT) rendering on the server meaning the code is compiled when needed not before runtime. It uses a combination of a routing framework and templating engine for rendering pages on demand. Whenever a user make a request it takes less time for the browser to load content onto the screen. 
