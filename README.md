@@ -82,7 +82,7 @@ To get started with Deno Fresh Framework you need to have Deno on your machine i
 ```
 deno run -A -r https://fresh.deno.dev blog
 ```
-It will scaffold out a new project with some example files.
+It will scaffold out a new project with some example files, to understand how fresh runs read the [https://fresh.deno.dev/docs/getting-started/create-a-project](docs).
 
 ![Fresh project folder structure](https://imgur.com/ovECi9p.png)
 
