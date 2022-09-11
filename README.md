@@ -81,7 +81,10 @@ To get started with Deno Fresh Framework you need to have Deno on your machine i
 
 It will scaffold out a new project with some example files.
 
+![Fresh project folder structure](https://imgur.com/ovECi9p)
+
 ```
 deno run -A -r https://fresh.deno.dev blog
 ```
-Switch into the newly created project and run `deno task start`, open your browser and navigate to `http://localhost:8000` you will see a page with a text `Welcome to `fresh`. Try updating this message in the ./routes/index.tsx file, and refresh`
+Switch into the newly created project and run `deno task start`, open your browser and navigate to `http://localhost:8000` you will see a page with a text "Welcome to fresh".
+
