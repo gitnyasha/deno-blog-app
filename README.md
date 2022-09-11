@@ -79,12 +79,12 @@ Deno Fresh framework also has a zero config necessary, there are no configuratio
 
 To get started with Deno Fresh Framework you need to have Deno on your machine if you do not already have it follow the instructions [here to install Deno](https://deno.land/manual/getting_started/installation). I will guide you in creating a simple blog app, where we can create, and get posts. To create a project use the following command below and I have named my project blog.
 
-It will scaffold out a new project with some example files.
-
-![Fresh project folder structure](https://imgur.com/ovECi9p)
-
 ```
 deno run -A -r https://fresh.deno.dev blog
 ```
-Switch into the newly created project and run `deno task start`, open your browser and navigate to `http://localhost:8000` you will see a page with a text "Welcome to fresh".
+It will scaffold out a new project with some example files.
+
+![Fresh project folder structure](https://imgur.com/ovECi9p.png)
+
+Using your terminal switch into the newly created project and run `deno task start`, open your browser and navigate to `http://localhost:8000` you will see a page with a text "Welcome to fresh".
 
