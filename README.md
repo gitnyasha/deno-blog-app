@@ -77,4 +77,4 @@ Deno Fresh framework also has a zero config necessary, there are no configuratio
 
 ## How to get started with Deno Fresh Framework
 
-
+To get started with Deno Fresh Framework you need to have Deno on your machine if you do not already have it follow the instructions the [here to install Deno](https://deno.land/manual/getting_started/installation).
