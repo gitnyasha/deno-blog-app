@@ -84,4 +84,4 @@ It will scaffold out a new project with some example files.
 ```
 deno run -A -r https://fresh.deno.dev blog
 ```
-Switch into the newly created project using and run `deno task start`
+Switch into the newly created project and run `deno task start`, open your browser and navigate to `http://localhost:8000` you will see a page with a text `Welcome to `fresh`. Try updating this message in the ./routes/index.tsx file, and refresh`
