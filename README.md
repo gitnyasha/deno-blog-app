@@ -76,6 +76,8 @@ Notice that I am importing data from a json file which we have not yet created i
   }
 ]
 ```
-![Imgur](https://i.imgur.com/a8B57ni.png)
+![Imgur](https://i.imgur.com/aJDM8GP.png)
 
-Let me start by adding a posts folder inside routes folder so that when you click on a single post you will be directed to that post page and in turn you will learn about how dynamic routes work in Fresh.
+Now open your browser on `http://localhost:8000` if your server is not running run `deno task start` in the terminal from your app root folder and in the browser it should display all the posts in your json file.
+
+Next I will add a posts folder inside routes folder and in the posts folder create a dynamic route `posts/[id].tsx`, everything is passed right after the path part of the URL becomes the parameter so that when you click on a post you will be directed to that post page.
