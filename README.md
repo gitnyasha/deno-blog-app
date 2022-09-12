@@ -25,7 +25,57 @@ Using your terminal switch into the newly created project and run `deno task sta
 
 ## Creating a the blog app
 
-I will start by creating a route, they handle requests to the path in your project and are defined as files inside the routes folder. Let me start by add a posts folder inside routes folder so that when you click on a single post you will be directed to that post page and in turn you will learn about how dynamic routes work in Fresh. All posts will be shown on the home page so navigate inside the `routes/index.tsx` and update it to match the following code
+I will start by creating a route, they handle requests to the path in your project and are defined as files inside the routes folder. All posts will be shown on the home page so navigate inside the `routes/index.tsx` and update it to match the following code
 
 ```
+import data from "../data/data.json" assert { type: "json" };
+
+export default function Home() {
+  return (
+    <div class="p-4 mx-auto max-w-screen-md">
+      <div class="flex flex-col gap-2 w-full">
+        <h1 class="text-3xl font-bold">All Posts</h1>
+        <ul class="flex flex-col gap-2 w-full">
+          {data.map((post) => (
+            <li class="flex flex-col gap-2 w-full" key={post.id}>
+              <h2 class="text-xl font-bold">
+                <a href={`/posts/${post.id}`}>{post.title}</a>
+              </h2>
+              <p class="flex-grow-1">{post.body}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
+
 ```
+
+Notice that I am importing data from a json file which we have not yet created in this tutorial I will not use a database but instead a json file to store our data, so go into the root folder and create a folder called `data`, inside the folder create a file `data.json` and add the following code.
+
+```
+[
+  {
+    "id": 1,
+    "title": "This is my first post",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+    "created_at": "2019-01-01 00:00:00"
+  },
+  {
+    "id": 2,
+    "title": "This is my second post",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+    "created_at": "2019-01-02 00:00:00"
+  },
+  {
+    "id": 3,
+    "title": "This is my third post",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+    "created_at": "2019-01-03 00:00:00"
+  }
+]
+```
+![Imgur](https://i.imgur.com/a8B57ni.png)
+
+Let me start by adding a posts folder inside routes folder so that when you click on a single post you will be directed to that post page and in turn you will learn about how dynamic routes work in Fresh.
