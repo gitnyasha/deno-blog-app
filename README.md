@@ -110,7 +110,7 @@ Note that the code above takes the parameter id from the URL and is used to matc
 
 ## Add interactivity
 
-As of now the server is rendering HTML and if you want to add some JavaScript which will be processed on the client side you use islands which enable client side interactivity in Fresh, they are rendered on the client side unlike other components, maybe you want to add a click button and a form and I'm going to add comment section to submit a comment on a single post and note that when you refresh the page the comment will be removed as in this tutorial we are not storing anything. Create a file inside `islands1 folder called `Comment.tsx` and add the following code inside that file
+As of now the server is rendering HTML and if you want to add some JavaScript which will be processed on the client side you use islands which enable client side interactivity in Fresh, they are rendered on the client side unlike other components, maybe you want to add a click button and a form and I'm going to add comment section to submit a comment on a single post and note that when you refresh the page the comment will be removed as in this tutorial we are not storing anything. Create a file inside `islands` folder called `Comment.tsx` and add the following code inside that file
 
 ```
 import { useState } from "preact/hooks";
@@ -148,7 +148,7 @@ export default function Comment() {
 }
 ```
 
-Next go and update the dynamic route `posts/[id].tsx` to match the following code
+Next go and update the dynamic route `posts/[id].tsx` to match the code below and test in the browser by adding a comment
 
 ```
 import { PageProps } from "$fresh/server.ts";
@@ -179,4 +179,4 @@ export default function SinglePost(props: PageProps) {
 
 ## Conclusion
 
-
+You have seen how Deno Fresh Framework is super easy is to create a new project and you have learned the benefits of Fresh in relation to app perfomance, how the code is rendered to the client, by not providing a build step the code is excuted very fast and that TypeScript comes out of the box without the need to config separately.  
