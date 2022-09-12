@@ -80,4 +80,103 @@ Notice that I am importing data from a json file which we have not yet created i
 
 Now open your browser on `http://localhost:8000` if your server is not running run `deno task start` in the terminal from your app root folder and in the browser it should display all the posts in your json file.
 
-Next I will add a posts folder inside routes folder and in the posts folder create a dynamic route `posts/[id].tsx`, everything is passed right after the path part of the URL becomes the parameter so that when you click on a post you will be directed to that post page.
+Next I will add a posts folder inside routes folder and in the posts folder create a dynamic route by adding square brackets around the file name like this `posts/[id].tsx`, dynamic routes match different paths not just a single static path, so that when you click on a link to the single post you will be directed to that post page for example the route `/posts/:id` will match the paths `/posts/1` and `/posts/2`. Insdie the `posts/[id].tsx` add the following code and test in the browser to see if different posts are rendered.
+
+```
+import { PageProps } from "$fresh/server.ts";
+import data from "../../data/data.json" assert { type: "json" };
+
+export default function SinglePost(props: PageProps) {
+  const id = props.params.id;
+  const post = data.find((post) => post.id === parseInt(id));
+
+  if (!post) {
+    return <h1>404 - Post {props.params.id} not found</h1>;
+  }
+
+  return (
+    <div class="p-4 mx-auto max-w-screen-md">
+      <div class="flex flex-col gap-2 w-full">
+        <h1 class="text-3xl font-bold">{post.title}</h1>
+        <p class="flex-grow-1">{post.body}</p>
+      </div>
+    </div>
+  );
+}
+
+```
+
+Note that the code above takes the parameter id from the URL and is used to match the id of every post in the json file, if they match then the title and body of that post will be displayed.
+
+## Add interactivity
+
+As of now the server is rendering HTML and if you want to add some JavaScript which will be processed on the client side you use islands which enable client side interactivity in Fresh, they are rendered on the client side unlike other components, maybe you want to add a click button and a form and I'm going to add comment section to submit a comment on a single post and note that when you refresh the page the comment will be removed as in this tutorial we are not storing anything. Create a file inside `islands1 folder called `Comment.tsx` and add the following code inside that file
+
+```
+import { useState } from "preact/hooks";
+
+export default function Comment() {
+  const [comment, setComment] = useState("");
+
+  const handleSubmit = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    setComment(comment);
+  };
+
+  return (
+    <div>
+      <form
+        onSubmit={handleSubmit}
+      >
+        <input
+          type="text"
+          value={comment}
+          onChange={(e) => setComment(e.currentTarget.value)}
+          placeholder="Add a comment"
+          class="flex-grow-1 border(gray-100 2) p-2"
+        />
+        <button
+          type="submit"
+          class="px-2 py-1 border(gray-100 2) hover:bg-gray-200"
+        >
+          Submit
+        </button>
+      </form>
+      {comment}
+    </div>
+  );
+}
+```
+
+Next go and update the dynamic route `posts/[id].tsx` to match the following code
+
+```
+import { PageProps } from "$fresh/server.ts";
+import data from "../../data/data.json" assert { type: "json" };
+import Comment from "../../islands/Comment.tsx";
+
+export default function SinglePost(props: PageProps) {
+  const id = props.params.id;
+  const post = data.find((post) => post.id === parseInt(id));
+
+  if (!post) {
+    return <h1>404 - Post {props.params.id} not found</h1>;
+  }
+
+  return (
+    <div class="p-4 mx-auto max-w-screen-md">
+      <div class="flex flex-col gap-2 w-full">
+        <h1 class="text-3xl font-bold">{post.title}</h1>
+        <p class="flex-grow-1">{post.body}</p>
+        <h4 class="text-2xl font-bold">Add Comments</h4>
+        <Comment />
+      </div>
+    </div>
+  );
+}
+
+```
+
+## Conclusion
+
+
