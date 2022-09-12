@@ -179,4 +179,4 @@ export default function SinglePost(props: PageProps) {
 
 ## Conclusion
 
-You have seen how Deno Fresh Framework is super easy is to create a new project and you have learned the benefits of Fresh in relation to app perfomance, how the code is rendered to the client, by not providing a build step the code is executed very fast and how TypeScript comes out of the box without the need to config separately. 
+You have seen how Deno Fresh Framework is super easy is to create a new project and you have learned the benefits of Fresh in relation to app perfomance, how the code is rendered to the client, by not providing a build step the code is executed very fast and how TypeScript comes out of the box without the need to config separately. Fresh also enables you to create powerful Saas applications and you may want to integrate different platforms like slack, and github with your app for your customers, the best platform for that is [Fusebit](https://fusebit.io/) it is 
