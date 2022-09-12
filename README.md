@@ -76,7 +76,7 @@ Notice that I am importing data from a json file which we have not yet created i
   }
 ]
 ```
-![Imgur](https://i.imgur.com/aJDM8GP.png)
+![Folder structure of a Fresh Framework inside vscode](https://i.imgur.com/aJDM8GP.png)
 
 Now open your browser on `http://localhost:8000` if your server is not running run `deno task start` in the terminal from your app root folder and in the browser it should display all the posts in your json file.
 
@@ -179,4 +179,4 @@ export default function SinglePost(props: PageProps) {
 
 ## Conclusion
 
-You have seen how Deno Fresh Framework is super easy is to create a new project and you have learned the benefits of Fresh in relation to app perfomance, how the code is rendered to the client, by not providing a build step the code is executed very fast and how TypeScript comes out of the box without the need to config separately. Fresh also enables you to create powerful Saas applications and you may want to integrate different platforms like slack, and github with your app for your customers, the best platform for that is [Fusebit](https://fusebit.io/) it is 
+You have seen how Deno Fresh Framework is super easy is to create a new project and you have learned the benefits of Fresh in relation to app perfomance, how the code is rendered to the client, by not providing a build step the code is executed very fast and how TypeScript comes out of the box without the need to config separately. Fresh also enables you to create powerful Saas applications and you may want to integrate different platforms like slack, and github with your app for your customers, the best platform for that is [Fusebit](https://fusebit.io/) it enables developers like you to quickly add integrations to an application using powerful API building blocks you manage your APIs in one place for example you might want to share your blog updates via slack.
